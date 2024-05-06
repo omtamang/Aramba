@@ -1,0 +1,162 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General Styling */
+body {
+  font-family: 'Inter', sans-serif; /* Use a common font for better cross-platform consistency */
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url("image/Herosection.png");
+  height: 100vh;
+  background-size: cover; /* Ensure the background image covers the entire section */
+  background-position: center; /* Center the background image */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text horizontally */
+}
+
+.section1 {
+  color: white; /* Set text color to white for better contrast */
+}
+
+/* Header */
+header {
+  background-color: #ECE6E1;
+  padding: 10px 0; /* Add padding to the top and bottom of the header */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Add padding to the header */
+}
+
+header img {
+  height: 80px; /* Reduce the height of the logo for better scaling */
+}
+
+/* Navigation Menu */
+.hero-section-box ul {
+  list-style: none;
+  background: #ECE6E1;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-section-box li {
+  display: inline-block;
+  margin-right: 20px; /* Add some space between menu items */
+}
+
+.hero-section-box a {
+  text-decoration: none;
+  color: #000;
+  padding: 10px 15px; /* Add padding to menu items */
+  transition: color 0.3s; /* Smooth transition for color change */
+}
+
+.hero-section-box a:hover {
+  color: #074DB5; /* Change color on hover */
+}
+
+/* Button Styling */
+button {
+  padding: 10px 20px; /* Increase padding for better touch experience */
+  border: none; /* Remove default button border */
+  border-radius: 5px; /* Add some rounding to the corners */
+  cursor: pointer;
+  background-color: #B8A18F;
+  color: #000;
+}
+
+button:hover {
+  background-color: #074DB5; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Content Section */
+.body_section {
+  width: 80%;
+  margin: 0 auto; /* Center the content horizontally */
+  padding: 20px; /* Add some padding around the content */
+}
+
+/* Glowing Remarks Section */
+.glowing_remarks {
+  display: flex;
+  flex-direction: column; /* Change flex direction for smaller screens */
+  align-items: center; /* Center content vertically */
+  margin-top: 40px; /* Add some space at the top */
+}
+
+/* Glowing Remarks Details */
+#glowing_remarks_detials,
+#our_story_details {
+  font-size: 16px;
+  padding-top: 20px; /* Add some space between paragraphs */
+  line-height: 1.5; /* Increase line height for better readability */
+}
+
+/* Footer */
+footer {
+  background-color: #ECE6E1;
+  padding: 20px 0; /* Add padding to the top and bottom of the footer */
+  text-align: center; /* Center content horizontally */
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  .body_section {
+      width: 90%; /* Adjust width for smaller screens */
+  }
+
+  .section1 h1,
+  .section1 h2 {
+      font-size: 30px; /* Decrease font size for smaller screens */
+  }
+
+  .hero-section-box ul {
+      display: none; /* Hide navigation menu on smaller screens */
+  }
+
+  .hero-section-box {
+      position: relative;
+  }
+
+  .hero-section-box a {
+      color: #fff;
+  }
+
+  .hero-section-box ul.show {
+      display: block; /* Show navigation menu when toggled */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #ECE6E1;
+  }
+
+  .hero-section-box ul.show li {
+      display: block;
+      text-align: center;
+  }
+
+  .hero-section-box ul.show a {
+      padding: 10px 0;
+      display: block;
+  }
+}
+
+/* Additional Media Queries for Even Smaller Screens */
+@media screen and (max-width: 480px) {
+  .hero-section h1,
+  .hero-section h2 {
+      font-size: 24px; /* Further decrease font size for smaller screens */
+  }
+}
